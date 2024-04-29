@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name="com.banuba.sdk.example.common.Application"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
         android:label="Banuba SDK Camera sample"
         tools:targetApi="31">
         <activity

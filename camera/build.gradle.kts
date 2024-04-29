@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
+
 plugins {
     id("com.android.application").version("8.3.2")
     id("org.jetbrains.kotlin.android").version("1.9.0")
@@ -34,12 +36,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -47,8 +43,19 @@ android {
     }
 }
 
-dependencies {
-    implementation("androidx.activity:activity-compose:1.9.0")
-    implementation("androidx.compose.material3:material3:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling:1.6.6")
+task("copyEffects") {
+    copy {
+        from("../common/effects")
+        into("src/main/assets/bnb-resources/effects")
+    }
 }
+
+gradle.projectsEvaluated {
+    project.tasks.preBuild.dependsOn("copyEffects")
+}
+
+dependencies {
+    implementation(project(":common"))
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+}
+
