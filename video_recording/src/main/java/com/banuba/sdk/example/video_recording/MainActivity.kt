@@ -7,8 +7,8 @@ import android.view.SurfaceView
 import android.view.View
 import android.widget.Button
 import android.widget.Switch
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import com.banuba.sdk.example.common.BaseActivity
 import com.banuba.sdk.input.CameraDevice
 import com.banuba.sdk.input.CameraInput
 import com.banuba.sdk.output.SurfaceOutput
@@ -23,7 +23,7 @@ import java.io.File
  * NOTE:
  * Applied masks are recorded as well.
  */
-class MainActivity : AppCompatActivity(R.layout.main) {
+class MainActivity : BaseActivity(R.layout.main) {
 
     private val surfaceView by lazy(LazyThreadSafetyMode.NONE) {
         findViewById<SurfaceView>(R.id.surfaceView)
@@ -93,6 +93,8 @@ class MainActivity : AppCompatActivity(R.layout.main) {
 
             stateVideoButton = (stateVideoButton + 1) % 3
         }
+
+        player.load("effects/TrollGrandma")
     }
 
     override fun onStart() {
