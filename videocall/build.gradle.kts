@@ -47,17 +47,6 @@ android {
     }
 }
 
-task("copyEffects") {
-    copy {
-        from("../common/effects")
-        into("src/main/assets/bnb-resources/effects")
-    }
-}
-
-gradle.projectsEvaluated {
-    project.tasks.preBuild.dependsOn("copyEffects")
-}
-
 dependencies {
     implementation(project(":common"))
     implementation("io.agora.rtc:full-sdk:4.0+")
