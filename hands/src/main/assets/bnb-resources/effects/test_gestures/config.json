@@ -1,0 +1,168 @@
+{
+  "assets": {
+    "attachments": {
+      "main_color": {
+        "type": "color"
+      }
+    },
+    "images": {
+      "text": {
+        "type": "text_texture",
+        "font": "NotoSans-Regular.ttf",
+        "width": 1024,
+        "height": 768,
+        "text": "No Gesture"
+      },
+      "camera": {
+        "type": "procedural_texture",
+        "algorithm": "camera_composer"
+      }
+    },
+
+    "materials": {
+      "shaders/bg": {
+        "samplers": [
+          {
+            "name": "s_text",
+            "image": "text"
+          }
+        ],
+        "state": {
+          "blend": "alpha",
+          "backfaces": false,
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        }
+      },
+      "shaders/hand_skelet": {
+            "samplers": [],
+            "state": {
+                "blend": "off",
+                "backfaces": false,
+                "colorwrite": true,
+                "ztest": false,
+                "zwrite": false
+            },   
+             "geometry_topology": "lines_list"
+      },
+      "$builtin$materials/copy_pixels.0": {
+        "parameters": {},
+        "samplers": [
+          {
+            "image": "camera",
+            "name": "tex_src"
+          }
+        ],
+        "state": {
+          "backfaces": true,
+          "blend": "off",
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        }
+      }
+    },
+
+    "meshes": {
+      "quad_surface": "quad.bsm2",
+      "hand_skelet": "$builtin$meshes/hand_skelet"
+    },
+    "hands":{
+            "hand_skelet":{
+                "mesh" : "hand_skelet"
+            }
+        }
+  },
+
+  "components": {
+    "copy_camera": {
+      "materials": ["$builtin$materials/copy_pixels.0"],
+      "mesh": "quad_surface",
+      "type": "mesh_instance"
+    },
+    "text_surface": {
+      "materials": ["shaders/bg"],
+      "mesh": "quad_surface",
+      "type": "mesh_instance"
+    },
+    "hand_skelet": {
+        "materials": ["shaders/hand_skelet"],
+        "mesh": "hand_skelet",
+        "type": "mesh_instance"
+    },
+    "hand_tracker": {
+        "hand": "hand_skelet",
+         "type": "hand_tracker",
+         "tracking_type" : "hand_skelet"
+    }
+  },
+
+  "entities": {
+    "copy_camera": {
+      "components": [
+        "copy_camera"
+      ],
+      "layer": "camera"
+    },
+    "text_surface": {
+      "components": [
+        "text_surface"
+      ],
+      "layer": "text"
+    },
+    "hand": {
+        "components": [
+          "hand_skelet"
+        ],
+        "layer": "camera"
+    },
+    "hand_tracker" :{
+        "components":[
+            "hand_tracker"
+        ]
+    }
+  },
+
+  "hierarchy": {
+    "hand_tracker":[
+        "hand"
+    ],
+    "root": [
+      "text_surface",
+      "copy_camera",
+      "hand_tracker"
+    ]
+  },
+
+  "layers": {
+    "text": {},
+    "camera": {}
+  },
+
+  "render_list": {
+    "default": [
+      {
+        "layer": "camera",
+        "render_target": "Main"
+      },
+      {
+        "layer": "text",
+        "render_target": "Main"
+      }
+    ]
+  },
+
+  "render_targets": {
+    "Main": [
+      "main_color"
+    ]
+  },
+
+
+  "scene": "test_gestures",
+  "script": {
+    "type": "latest",
+    "entry_point": "config.js"
+  }
+}

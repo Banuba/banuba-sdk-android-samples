@@ -1,0 +1,296 @@
+{
+    "assets": {
+        "attachments": {
+            "main_color": {
+                "type": "color"
+            },
+            "main_z": {
+                "clear": [
+                    1.0
+                ],
+                "type": "depth"
+            }
+        },
+        "images": {
+          "camera": {
+            "type": "procedural_texture",
+            "algorithm": "camera_composer"
+          },
+          "ibl_diff.ktx": {
+                "file_name": "images/ibl_diff.ktx",
+                "type": "texture"
+            },
+          "ibl_spec.ktx": {
+                "file_name": "images/ibl_spec.ktx",
+                "type": "texture"
+            },
+          "ring_Base_Color.png": {
+                "file_name": "images/ring_Base_Color.png",
+                "type": "texture"
+            },
+          "ring_Metallic.png": {
+                "file_name": "images/ring_Metallic.png",
+                "type": "texture"
+            },
+          "ring_Roughness.png": {
+                "file_name": "images/ring_Roughness.png",
+                "type": "texture"
+            },
+          "no_Normal.png": {
+                "file_name": "images/no_Normal.png",
+                "type": "texture"
+            },
+          "cristal_spec.ktx": {
+              "file_name": "images/cristal_spec.ktx",
+              "type": "texture"
+          },
+          "brdf.ktx": {
+            "file_name": "images/brdf.ktx",
+            "type": "texture"
+        }
+        },
+        "materials": {
+            "shaders/hand_skelet": {
+                "samplers": [],
+                "state": {
+                    "blend": "off",
+                    "backfaces": false,
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                },
+                "geometry_topology": "lines_list"
+            },
+            "shaders/finger": {
+                "samplers": [],
+                "state": {
+                    "blend": "off",
+                    "backfaces": false,
+                    "colorwrite": false,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            },
+            "shaders/mat_gold": {
+                "samplers": [
+                  {
+                    "image": "ring_Base_Color.png",
+                    "name": "tex_diffuse"
+                  },
+                  {
+                    "image": "no_Normal.png",
+                    "name": "tex_normal"
+                  },
+                  {
+                    "image": "ring_Metallic.png",
+                    "name": "tex_metallic"
+                  },
+                  {
+                    "image": "ring_Roughness.png",
+                    "name": "tex_roughness"
+                  },
+                  {
+                    "image": "ibl_diff.ktx",
+                    "name": "tex_ibl_diff"
+                  },
+                  {
+                    "image": "ibl_spec.ktx",
+                    "name": "tex_ibl_spec"
+                  }
+              ],
+                "state": {
+                    "blend": "off",
+                    "backfaces": false,
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            },
+            "shaders/mat_diamond": {
+                "samplers": [
+                  {
+                    "image": "ring_Base_Color.png",
+                    "name": "tex_diffuse"
+                  },
+                  {
+                    "image": "no_Normal.png",
+                    "name": "tex_normal"
+                  },
+                  {
+                    "image": "ring_Metallic.png",
+                    "name": "tex_metallic"
+                  },
+                  {
+                    "image": "ring_Roughness.png",
+                    "name": "tex_roughness"
+                  },
+                  {
+                    "image": "ibl_diff.ktx",
+                    "name": "tex_ibl_diff"
+                  },
+                  {
+                    "image": "ibl_spec.ktx",
+                    "name": "tex_ibl_spec"
+                  },
+                  {
+                    "image": "brdf.ktx",
+                    "name": "tex_brdf"
+                  },
+                  {
+                    "image": "cristal_spec.ktx",
+                    "name": "tex_skybox"
+                  }
+              ],
+                "state": {
+                    "blend": "alpha",
+                    "backfaces": false,
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            },
+          "$builtin$materials/copy_pixels.0": {
+            "parameters": {},
+            "samplers": [
+              {
+                "image": "camera",
+                "name": "tex_src"
+              }
+            ],
+            "state": {
+              "backfaces": true,
+              "blend": "off",
+              "colorwrite": true,
+              "ztest": false,
+              "zwrite": false
+            }
+          }
+        },
+        "meshes": {
+            "plane_surface": "$builtin$meshes/fs_tri",
+            "hand_skelet": "$builtin$meshes/hand_skelet",
+            "quad_surface": "meshes/quad.bsm2",
+            "ring_mesh": "meshes/ring_finger.bsm2"
+        },
+        "hands":{
+            "hand_skelet":{
+                "mesh" : "hand_skelet"
+            },
+            "hand_ring":{
+                "mesh" : "ring_mesh"
+            }
+        },
+        "media": {}
+    },
+    "components": {
+        "copy_camera": {
+          "materials": ["$builtin$materials/copy_pixels.0"],
+          "mesh": "quad_surface",
+          "type": "mesh_instance"
+        },
+        "hand_skelet": {
+            "materials": ["shaders/hand_skelet"],
+            "mesh": "hand_skelet",
+            "type": "mesh_instance"
+        },
+        "ring": {
+            "materials": ["shaders/mat_gold", "shaders/mat_diamond", "shaders/finger"],
+            "mesh": "ring_mesh",
+            "type": "mesh_instance"
+        },
+        "hand_tracker": {
+            "hand": "hand_skelet",
+             "type": "hand_tracker",
+             "tracking_type" : "hand_skelet"
+        },
+        "ring_tracker": {
+            "hand": "hand_ring",
+             "type": "hand_tracker",
+             "tracking_type" : "ring"
+        }
+    },
+    "entities": {
+        "copy_camera": {
+          "components": [
+            "copy_camera"
+          ],
+          "layer": "camera"
+        },
+        "hand": {
+            "components": [
+                "hand_skelet"
+            ],
+            "layer": "camera"
+        },
+        "hand_tracker" :{
+            "components":[
+                "hand_tracker"
+            ]
+        },
+        "ring": {
+            "components": [
+                "ring"
+            ],
+            "layers": [
+                "finger",
+                "ring"
+            ]
+        },
+        "ring_tracker" :{
+            "components":[
+                "ring_tracker"
+            ]
+        }
+    },
+    "hierarchy": {
+        "hand_tracker":[
+            "hand"
+        ],
+        "ring_tracker":[
+            "ring"
+        ],
+        "root": [
+            "copy_camera",
+            "hand_tracker",
+            "ring_tracker"
+        ]
+    },
+    "layers": {
+        "camera": {},
+        "finger": {},
+        "ring": {}
+    },
+    "render_list": {
+        "default": [
+            {
+                "layer": "camera",
+                "render_target": "cameraRT"
+            },
+            {
+                "layer": "finger",
+                "render_target": "cameraRT",
+                "sub_geometries": [
+                    "finger"
+                ]
+            },
+            {
+                "layer": "ring",
+                "render_target": "cameraRT",
+                "sub_geometries": [
+                    "mat_gold", "mat_diamond"
+                ]
+            }
+        ]
+    },
+    "render_targets": {
+        "cameraRT": [
+            "main_color",
+            "main_z"
+        ]
+    },
+    "scene": "test_Ring",
+    "script": {
+        "type": "latest",
+        "entry_point": "config.js"
+    }
+}

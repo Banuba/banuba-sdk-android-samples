@@ -2,6 +2,7 @@ package com.banuba.sdk.example.common
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.BitmapFactory
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
@@ -65,8 +66,11 @@ class CustomEffectsListAdapter(
             ring.visibility(position == selectedIndex)
 
             val previewResource = effectPreviews[effect.name]
-            if (previewResource == null) {
-                image.setImageResource(R.drawable.ic_regular_background)
+            if (previewResource == null || previewResource == 0) {
+                val bitmap = BitmapFactory.decodeStream(
+                    itemView.context.assets.open(
+                        effect.path + "/preview.png"))
+                image.setImageBitmap(bitmap)
             } else {
                 image.setImageResource(previewResource)
             }

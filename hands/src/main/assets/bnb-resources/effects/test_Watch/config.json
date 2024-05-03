@@ -1,0 +1,338 @@
+{
+    "assets": {
+        "attachments": {
+            "main_color": {
+                "type": "color"
+            },
+            "main_z": {
+                "clear": [
+                    1.0
+                ],
+                "type": "depth"
+            }
+        },
+        "images": {
+          "camera": {
+            "type": "procedural_texture",
+            "algorithm": "camera_composer"
+          },
+          "case1_BaseColor": {
+            "file_name": "images/case1_BaseColor.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "case1_Metallic-case1_Roughness": {
+            "file_name": "images/case1_Metallic-case1_Roughness.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "case1_Normal": {
+            "file_name": "images/case1_Normal.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "ibl_diff": {
+            "file_name": "images/ibl_diff.ktx",
+            "type": "cubemap"
+          },
+          "ibl_spec": {
+            "file_name": "images/ibl_spec.ktx",
+            "type": "cubemap"
+          },
+          "screen_BaseColor": {
+            "file_name": "images/screen_BaseColor.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "screen_Metallic-screen_Roughness": {
+            "file_name": "images/screen_Metallic-screen_Roughness.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "screen_Normal": {
+            "file_name": "images/screen_Normal.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "wrist_BaseColor": {
+            "file_name": "images/wrist_BaseColor.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "wrist_Metallic-wrist_Roughness": {
+            "file_name": "images/wrist_Metallic-wrist_Roughness.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          },
+          "wrist_Normal": {
+            "file_name": "images/wrist_Normal.png",
+            "filter": "trilinear",
+            "mips": true,
+            "tiling": false,
+            "type": "texture"
+          }
+        },
+        "materials": {
+          "case1": {
+            "path": "shaders/case1",
+            "parameters": null,
+            "samplers": [
+              {
+                "image": "case1_BaseColor",
+                "name": "base_color"
+              },
+              {
+                "image": "case1_Metallic-case1_Roughness",
+                "name": "metallic_roughness"
+              },
+              {
+                "image": "case1_Normal",
+                "name": "normal"
+              },
+              {
+                "image": "ibl_diff",
+                "name": "tex_ibl_diff"
+              },
+              {
+                "image": "ibl_spec",
+                "name": "tex_ibl_spec"
+              },
+              {
+                "name": "bnb_BONES"
+              }
+            ],
+            "state": {
+              "backfaces": true,
+              "blend": "off",
+              "colorwrite": true,
+              "ztest": true,
+              "zwrite": true
+            }
+          },
+          "screen": {
+            "path": "shaders/screen",
+            "parameters": null,
+            "samplers": [
+              {
+                "image": "screen_BaseColor",
+                "name": "base_color"
+              },
+              {
+                "image": "screen_Metallic-screen_Roughness",
+                "name": "metallic_roughness"
+              },
+              {
+                "image": "screen_Normal",
+                "name": "normal"
+              },
+              {
+                "image": "ibl_diff",
+                "name": "tex_ibl_diff"
+              },
+              {
+                "image": "ibl_spec",
+                "name": "tex_ibl_spec"
+              },
+              {
+                "name": "bnb_BONES"
+              }
+            ],
+            "state": {
+              "backfaces": true,
+              "blend": "off",
+              "colorwrite": true,
+              "ztest": true,
+              "zwrite": true
+            }
+          },
+          "wrist": {
+            "path": "shaders/wrist",
+            "parameters": null,
+            "samplers": [
+              {
+                "image": "wrist_BaseColor",
+                "name": "base_color"
+              },
+              {
+                "image": "wrist_Metallic-wrist_Roughness",
+                "name": "metallic_roughness"
+              },
+              {
+                "image": "wrist_Normal",
+                "name": "normal"
+              },
+              {
+                "image": "ibl_diff",
+                "name": "tex_ibl_diff"
+              },
+              {
+                "image": "ibl_spec",
+                "name": "tex_ibl_spec"
+              },
+              {
+                "name": "bnb_BONES"
+              }
+            ],
+            "state": {
+              "backfaces": true,
+              "blend": "off",
+              "colorwrite": true,
+              "ztest": true,
+              "zwrite": true
+            }
+          },
+          "$builtin$materials/copy_pixels.0": {
+            "parameters": {},
+            "samplers": [
+              {
+                "image": "camera",
+                "name": "tex_src"
+              }
+            ],
+            "state": {
+              "backfaces": true,
+              "blend": "off",
+              "colorwrite": true,
+              "ztest": false,
+              "zwrite": false
+            }
+          }
+        },
+        "meshes": {
+            "plane_surface": "$builtin$meshes/fs_tri",
+            "quad_surface": "$builtin$meshes/quad",
+            "watch": "meshes/watch.bsm2"
+        },
+        "hands": {
+            "watch_hand": {
+              "mesh": "watch"
+            }
+        },
+        "media": {}
+    },
+    "components": {
+        "copy_camera": {
+          "materials": ["$builtin$materials/copy_pixels.0"],
+          "mesh": "quad_surface",
+          "type": "mesh_instance"
+        },
+        "watch_mesh_instance": {
+          "animation": {
+            "mode": "fixed",
+            "name": "static"
+          },
+          "materials": [
+            "wrist",
+            "case1",
+            "screen"
+          ],
+          "mesh": "watch",
+          "physics": {
+            "bones": {
+              "apple_watch:tracking_node_placeholder": 0,
+              "~apple_watch:tracking_node_placeholder": 0
+            },
+            "bones_in_mv_space": false,
+            "damping": 0.9900000095367432,
+            "gravity": [
+              0,
+              -1000,
+              0
+            ]
+          },
+          "type": "mesh_instance"
+        },
+        "watch_transformation": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "translation": [
+            0,
+            0,
+            -1000
+          ],
+          "type": "transformation_3d"
+        },
+        "watch_tracker": {
+          "hand": "watch_hand",
+          "type": "hand_tracker",
+          "tracking_type" : "watch"
+        }
+    },
+    "entities": {
+        "copy_camera": {
+          "components": [
+            "copy_camera"
+          ],
+          "layer": "camera"
+        },
+        "watch": {
+          "components": [
+            "watch_tracker",
+            "watch_mesh_instance",
+            "watch_transformation"
+          ],
+          "layer": "Watch"
+        }
+    },
+    "global_params": [
+      "js_MV"
+    ],
+    "hierarchy": {
+        "root": [
+            "copy_camera",
+            "watch"
+        ]
+    },
+    "layers": {
+        "camera": {},
+        "Watch": {}
+
+    },
+    "render_list": {
+        "default": [
+            {
+                "layer": "camera",
+                "render_target": "cameraRT"
+            },
+            {
+              "layer": "Watch",
+              "render_target": "cameraRT"
+            }
+        ]
+    },
+    "render_targets": {
+        "cameraRT": [
+            "main_color",
+            "main_z"
+        ]
+    },
+    "scene": "Watch",
+    "script": {
+        "type": "latest",
+        "entry_point": "config.js"
+    }
+}
