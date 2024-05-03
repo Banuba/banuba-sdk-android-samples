@@ -26,6 +26,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 repositories {
@@ -42,6 +46,8 @@ repositories {
 }
 
 dependencies {
+    api("androidx.recyclerview:recyclerview:1.3.2")
+    api("androidx.constraintlayout:constraintlayout:2.1.4")
     api("androidx.appcompat:appcompat:1.6.1")
     api("com.banuba.sdk:banuba_sdk:1.12.+")
 }
