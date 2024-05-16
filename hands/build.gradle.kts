@@ -49,5 +49,7 @@ android {
 
 dependencies {
     implementation(project(":common"))
+    implementation("com.banuba.sdk:hands:1.12.+")
+    implementation("com.banuba.sdk:watch:1.12.+")
 }
 

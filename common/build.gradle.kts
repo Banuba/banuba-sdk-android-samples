@@ -49,5 +49,18 @@ dependencies {
     api("androidx.recyclerview:recyclerview:1.3.2")
     api("androidx.constraintlayout:constraintlayout:2.1.4")
     api("androidx.appcompat:appcompat:1.6.1")
-    api("com.banuba.sdk:banuba_sdk:1.12.+")
+
+    // Below are Banuba dependencies.
+    // This API module, it is must be in your project, other dependecnies
+    // are option. Everything depends on your needs
+    // https://docs.banuba.com/face-ar-sdk-v1/core/tutorials/using_packages/#list-of-all-available-packages
+    api("com.banuba.sdk:sdk_api:1.12.+")
+    // Face tracking is used in most effects
+    api("com.banuba.sdk:face_tracker:1.12.+")
+    // Required to change background
+    api("com.banuba.sdk:background:1.12.+")
+    // These dependency are usually required for Makeup and beauty
+    api("com.banuba.sdk:lips:1.12.+")
+    api("com.banuba.sdk:eyes:1.12.+")
+
 }
