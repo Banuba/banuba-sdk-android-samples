@@ -1,0 +1,2249 @@
+{
+	"action_units": [
+		"JawOpen",
+		"JawLeft",
+		"JawRight",
+		"MouthSmileLeft",
+		"MouthSmileRight",
+		"MouthLeft",
+		"MouthRight",
+		"MouthDimpleLeft",
+		"MouthDimpleRight",
+		"NoseSneerLeft",
+		"NoseSneerRight",
+		"MouthFunnel",
+		"_MouthPucker",
+		"MouthRollUpper",
+		"MouthShrugUpper",
+		"MouthShrugLower",
+		"MouthRollLower",
+		"MouthFrownLeft",
+		"MouthPressLeft",
+		"MouthFrownRight",
+		"MouthPressRight",
+		"MouthUpperUpLeft",
+		"MouthUpperUpRight",
+		"MouthStretchLeft",
+		"MouthStretchRight",
+		"MouthLowerDownLeft",
+		"MouthLowerDownRight",
+		"CheekSquintLeft",
+		"CheekSquintRight",
+		"_MouthClose",
+		"BrowDownLeft",
+		"BrowDownRight",
+		"BrowInnerUp",
+		"BrowOuterUpLeft",
+		"BrowOuterUpRight",
+		"EyeBlinkLeft",
+		"EyeBlinkRight",
+		"EyeSquintLeft",
+		"EyeSquintRight",
+		"_EyeWideRight",
+		"_EyeWideLeft",
+		"ShapeFaceRound",
+		"ShapeFaceSquare",
+		"ShapeFaceTriangle",
+		"ShapeFaceDiamond",
+		"ShapeFaceHeart",
+		"ShapeFacePear",
+		"ShapeFaceRectangular",
+		"ShapeFaceOblong"
+	],
+	"assets": {
+		"attachments": {
+			"main_color": {
+				"clear": [
+					0.2,
+					0.2,
+					0.2,
+					1.0
+				],
+				"type": "color"
+			},
+			"main_z": {
+				"clear": [
+					1.0
+				],
+				"type": "depth"
+			},
+			"foreground_color": {
+				"clear": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"type": "color"
+			},
+			"lut_color": {
+				"clear": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"type": "color"
+			}
+		},
+		"faces": {
+			"face0": {
+				"index": 0,
+				"mesh": "!scene_FACE"
+			}
+		},
+		"images": {
+			"body_Base": {
+				"file_name": "modules/body/male_head_BaseColor.jpg",
+				"type": "texture"
+			},
+			"body_MR": {
+				"file_name": "modules/body/images/head_MR.png",
+				"type": "texture"
+			},
+			"body_Normal": {
+				"file_name": "modules/body/images/head_Normal.png",
+				"type": "texture"
+			},
+			"body_blendshapes": {
+				"file_name": "modules/body/images/blendshapes_body.ktx",
+				"type": "texture"
+			},
+			"eyes_Base": {
+				"file_name": "modules/eyes/images/eyes_Base.png",
+				"type": "texture"
+			},
+			"eyes_MR": {
+				"file_name": "modules/eyes/images/eyes_MR.png",
+				"type": "texture"
+			},
+			"eyes_Normal": {
+				"file_name": "modules/eyes/images/eyes_Normal.png",
+				"type": "texture"
+			},
+			"eyes_blendshapes": {
+				"file_name": "modules/eyes/images/blendshapes_eyes.ktx",
+				"type": "texture"
+			},
+			"eyelashes_Normal": {
+				"file_name": "modules/eyelashes/images/eyelashes_Normal.png",
+				"type": "texture"
+			},
+			"eyelashes_01_blendshapes": {
+				"file_name": "modules/eyelashes/images/blendshapes_eyelashes_01.ktx",
+				"type": "texture"
+			},
+			"eyelashes_02_blendshapes": {
+				"file_name": "modules/eyelashes/images/blendshapes_eyelashes_02.ktx",
+				"type": "texture"
+			},
+			"eyelashes_03_blendshapes": {
+				"file_name": "modules/eyelashes/images/blendshapes_eyelashes_03.ktx",
+				"type": "texture"
+			},
+			"eyelashes_04_blendshapes": {
+				"file_name": "modules/eyelashes/images/blendshapes_eyelashes_04.ktx",
+				"type": "texture"
+			},
+			"eyelids": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"eyeShadow_Base": {
+				"file_name": "modules/eyes/images/eyeShadow_Base.png",
+				"type": "texture"
+			},
+			"eyeShadow_MR": {
+				"file_name": "modules/eyes/images/eyeShadow_MR.png",
+				"type": "texture"
+			},
+			"eyeShadow_Normal": {
+				"file_name": "modules/eyes/images/eyeShadow_Normal.png",
+				"type": "texture"
+			},
+			"eyeShadow_blendshapes": {
+				"file_name": "modules/eyes/images/blendshapes_eyes.ktx",
+				"type": "texture"
+			},
+			"brows_Base": {
+				"file_name": "modules/brows/images/brows_Base.png",
+				"type": "texture"
+			},
+			"brows_MR": {
+				"file_name": "modules/brows/images/brows_MR.png",
+				"type": "texture"
+			},
+			"brows_Normal": {
+				"file_name": "modules/brows/images/brows_Normal.png",
+				"type": "texture"
+			},
+			"brows_blendshapes": {
+				"file_name": "modules/brows/images/blendshapes_brows.ktx",
+				"type": "texture"
+			},
+			"hair_Base": {
+				"file_name": "modules/hair/images/hair_01_Base.jpg",
+				"type": "texture"
+			},
+			"hair_MR": {
+				"file_name": "modules/hair/images/hair_01_MR.jpg",
+				"type": "texture"
+			},
+			"hair_Normal": {
+				"file_name": "modules/hair/images/hair_01_Normal.jpg",
+				"type": "texture"
+			},
+			"hair_blendshapes": {
+				"file_name": "modules/hair/images/blendshapes_hair_01.ktx",
+				"type": "texture"
+			},
+			"hat_Base": {
+				"file_name": "modules/headwear/images/hat_02_Base.png",
+				"type": "texture"
+			},
+			"hat_MR": {
+				"file_name": "modules/headwear/images/hat_02_MR.png",
+				"type": "texture"
+			},
+			"hat_Normal": {
+				"file_name": "modules/headwear/images/hat_02_Normal.png",
+				"type": "texture"
+			},
+			"hat_blendshapes": {
+				"file_name": "modules/headwear/images/blendshapes_hat_02.ktx",
+				"type": "texture"
+			},
+			"mustache_Base": {
+				"file_name": "modules/facialhair/images/mustache_02_Base.png",
+				"type": "texture"
+			},
+			"mustache_MR": {
+				"file_name": "modules/facialhair/images/mustache_02_MR.png",
+				"type": "texture"
+			},
+			"mustache_Normal": {
+				"file_name": "modules/facialhair/images/mustache_02_Normal.png",
+				"type": "texture"
+			},
+			"mustache_blendshapes": {
+				"file_name": "modules/facialhair/images/blendshapes_mustache_02.ktx",
+				"type": "texture"
+			},
+			"ears_Base": {
+				"file_name": "modules/ears/images/ears_Base.png",
+				"type": "texture"
+			},
+			"ears_MR": {
+				"file_name": "modules/ears/images/ears_MR.png",
+				"type": "texture"
+			},
+			"ears_Normal": {
+				"file_name": "modules/ears/images/ears_Normal.png",
+				"type": "texture"
+			},
+			"ears_blendshapes": {
+				"file_name": "modules/ears/images/blendshapes_ears.ktx",
+				"type": "texture"
+			},
+			"earrings_L_Base": {
+				"file_name": "modules/ears/images/earring_01_L_Base.png",
+				"type": "texture"
+			},
+			"earrings_L_Normal": {
+				"file_name": "modules/ears/images/earring_01_L_Normal.png",
+				"type": "texture"
+			},
+			"earrings_L_blendshapes": {
+				"file_name": "modules/ears/images/blendshapes_earrings_L.ktx",
+				"type": "texture"
+			},
+			"earrings_R_Base": {
+				"file_name": "modules/ears/images/earring_01_R_Base.png",
+				"type": "texture"
+			},
+			"earrings_R_Normal": {
+				"file_name": "modules/ears/images/earring_01_R_Normal.png",
+				"type": "texture"
+			},
+			"earrings_R_blendshapes": {
+				"file_name": "modules/ears/images/blendshapes_earrings_R.ktx",
+				"type": "texture"
+			},
+			"mouth_Base": {
+				"file_name": "modules/mouth/mouth_Base.png",
+				"type": "texture"
+			},
+			"mouth_MR": {
+				"file_name": "modules/mouth/mouth_MR.png",
+				"type": "texture"
+			},
+			"mouth_Normal": {
+				"file_name": "modules/mouth/mouth_Normal.png",
+				"type": "texture"
+			},
+			"mouth_blendshapes": {
+				"file_name": "images/blendshapes_mouth.ktx",
+				"type": "texture"
+			},
+			"glasses_Base": {
+				"file_name": "modules/glasses/images/glasses_01_Base.png",
+				"type": "texture"
+			},
+			"glasses_MR": {
+				"file_name": "modules/glasses/images/glasses_01_MR.png",
+				"type": "texture"
+			},
+			"glasses_Normal": {
+				"file_name": "modules/glasses/images/glasses_01_Normal.png",
+				"type": "texture"
+			},
+			"glasses_blendshapes": {
+				"file_name": "modules/glasses/images/blendshapes_glasses_01.ktx",
+				"type": "texture"
+			},
+			"cloth_Base": {
+				"file_name": "modules/outfit/images/cloth_01_Base.jpg",
+				"type": "texture"
+			},
+			"cloth_MR": {
+				"file_name": "modules/outfit/images/cloth_01_MR.jpg",
+				"type": "texture"
+			},
+			"cloth_Normal": {
+				"file_name": "modules/outfit/images/cloth_01_Normal.jpg",
+				"type": "texture"
+			},
+			"logo_Base": {
+				"file_name": "modules/outfit/images/logo_Base.png",
+				"type": "texture"
+			},
+			"logo_MR": {
+				"file_name": "modules/outfit/images/logo_01_MR.jpg",
+				"type": "texture"
+			},
+			"logo_Normal": {
+				"file_name": "modules/outfit/images/logo_01_Normal.jpg",
+				"type": "texture"
+			},
+			"ibl_diff.ktx": {
+				"file_name": "images/ibl_diff.ktx",
+				"type": "texture"
+			},
+			"ibl_spec.ktx": {
+				"file_name": "images/ibl_spec.ktx",
+				"type": "texture"
+			},
+			"mask_lips": {
+				"file_name": "modules/body/mask_lips.png",
+				"type": "texture"
+			},
+			"overlay": {
+				"file_name": "modules/body/male_head_overlay.jpg",
+				"type": "texture"
+			},
+			"ears_overlay": {
+				"file_name": "modules/ears/images/ears_overlay.jpg",
+				"type": "texture"
+			},
+			"base": {
+				"file_name": "modules/body/male_head_BaseColor.jpg",
+				"type": "texture"
+			},
+			"foreground": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"background": {
+				"file_name": "images/backgrounds/BG_default.png",
+				"type": "texture"
+			},
+			"lut_image": {
+				"file_name": "images/null_lut.png",
+				"type": "lut"
+			},
+			"facial": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"wrinkles": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"freckles": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"moles": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"blush": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"shadows": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			},
+			"lips_glitter": {
+				"file_name": "images/null_image.png",
+				"type": "texture"
+			}
+		},
+		"materials": {
+			"$builtin$materials/copy_pixels.-1": {
+				"parameters": {},
+				"samplers": [
+					{
+						"image": "main_color",
+						"name": "tex_src"
+					}
+				],
+				"state": {
+					"backfaces": true,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": false,
+					"zwrite": false
+				}
+			},
+			"$builtin$materials/copy_pixels.0": {
+				"parameters": {},
+				"samplers": [
+					{
+						"image": "foreground_color",
+						"name": "tex_src"
+					}
+				],
+				"state": {
+					"backfaces": true,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": false,
+					"zwrite": false
+				}
+			},
+			"mat_head": {
+				"path": "modules/body/mat_head",
+				"built_in_samplers": [
+					"bnb_BONES"
+				],
+				"samplers": [
+					{
+						"image": "body_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "body_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "body_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "body_blendshapes",
+						"name": "tex_blend_shapes"
+					},
+					{
+						"image": "overlay",
+						"name": "tex_overlay"
+					},
+					{
+						"image": "mask_lips",
+						"name": "lips"
+					},
+					{
+						"image": "wrinkles",
+						"name": "wrinkles"
+					},
+					{
+						"image": "freckles",
+						"name": "freckles"
+					},
+					{
+						"image": "moles",
+						"name": "moles"
+					},
+					{
+						"image": "blush",
+						"name": "blush"
+					},
+					{
+						"image": "lips_glitter",
+						"name": "lips_glitter"
+					},
+					{
+						"image": "facial",
+						"name": "facial"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_eyes": {
+				"path": "modules/eyes/mat_eyes",
+				"samplers": [
+					{
+						"image": "eyes_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "eyes_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "eyes_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "eyes_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_eyelashes": {
+				"path": "modules/eyelashes/mat_eyelashes",
+				"samplers": [
+					{
+						"image": "eyelashes_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "eyelashes_01_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_eyelashes1": {
+				"path": "modules/eyelashes/mat_eyelashes",
+				"samplers": [
+					{
+						"image": "eyelashes_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "eyelashes_02_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_eyelashes2": {
+				"path": "modules/eyelashes/mat_eyelashes",
+				"samplers": [
+					{
+						"image": "eyelashes_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "eyelashes_03_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_eyelashes3": {
+				"path": "modules/eyelashes/mat_eyelashes",
+				"samplers": [
+					{
+						"image": "eyelashes_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "eyelashes_04_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_eyeShadow": {
+				"path": "modules/eyes/mat_eyeShadow",
+				"samplers": [
+					{
+						"image": "eyeShadow_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "eyeShadow_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "eyeShadow_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "eyeShadow_blendshapes",
+						"name": "tex_blend_shapes"
+					},
+					{
+						"image": "eyelids",
+						"name": "eyelids_tex"
+					},
+					{
+						"image": "shadows",
+						"name": "shadows"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "multiply",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_brows": {
+				"path": "modules/brows/mat_brows",
+				"samplers": [
+					{
+						"image": "brows_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "brows_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "brows_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "brows_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_hair_01": {
+				"path": "modules/hair/mat_hair",
+				"samplers": [
+					{
+						"image": "hair_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "hair_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "hair_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "hair_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_hat_01": {
+				"path": "modules/headwear/mat_headwear",
+				"samplers": [
+					{
+						"image": "hat_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "hat_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "hat_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "hat_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_mustache_01": {
+				"path": "modules/facialhair/mat_mustache",
+				"samplers": [
+					{
+						"image": "mustache_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "mustache_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "mustache_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "mustache_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_ears": {
+				"path": "modules/ears/mat_ears",
+				"samplers": [
+					{
+						"image": "ears_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "ears_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "ears_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "ears_blendshapes",
+						"name": "tex_blend_shapes"
+					},
+					{
+						"image": "ears_overlay",
+						"name": "tex_overlay"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_earring_L": {
+				"path": "modules/ears/mat_earring_L",
+				"samplers": [
+					{
+						"image": "earrings_L_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "earrings_L_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "earrings_L_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_earring_R": {
+				"path": "modules/ears/mat_earring_R",
+				"samplers": [
+					{
+						"image": "earrings_R_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "earrings_R_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "earrings_R_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_mouth": {
+				"path": "modules/mouth/mat_mouth",
+				"samplers": [
+					{
+						"image": "mouth_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "mouth_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "mouth_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "mouth_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_glasses_01": {
+				"path": "modules/glasses/mat_glasses",
+				"samplers": [
+					{
+						"image": "glasses_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "glasses_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "glasses_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					},
+					{
+						"image": "glasses_blendshapes",
+						"name": "tex_blend_shapes"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "alpha",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_cloth_01": {
+				"path": "modules/outfit/outfit",
+				"samplers": [
+					{
+						"image": "cloth_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "cloth_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "cloth_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"mat_logo_01": {
+				"path": "modules/outfit/logo",
+				"samplers": [
+					{
+						"image": "logo_Base",
+						"name": "base_color"
+					},
+					{
+						"image": "logo_MR",
+						"name": "metallic_roughness"
+					},
+					{
+						"image": "logo_Normal",
+						"name": "normal"
+					},
+					{
+						"image": "ibl_diff.ktx",
+						"name": "tex_ibl_diff"
+					},
+					{
+						"image": "ibl_spec.ktx",
+						"name": "tex_ibl_spec"
+					},
+					{
+						"name": "bnb_BONES"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "alpha",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": true
+				}
+			},
+			"foreground": {
+				"path": "modules/background/foreground",
+				"samplers": [
+					{
+						"image": "main_color",
+						"name": "tex_camera"
+					},
+					{
+						"image": "foreground",
+						"name": "tex_foreground"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "alpha",
+					"colorwrite": true,
+					"ztest": false,
+					"zwrite": false
+				}
+			},
+			"background": {
+				"path": "modules/background/background",
+				"samplers": [
+					{
+						"image": "background",
+						"name": "tex_background"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": false,
+					"zwrite": false
+				}
+			},
+			"lut": {
+				"path": "modules/background/lut_filter",
+				"samplers": [
+					{
+						"image": "foreground_color",
+						"name": "tex_camera"
+					},
+					{
+						"image": "lut_image",
+						"name": "tex_filter"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": false,
+					"zwrite": false
+				}
+			},
+			"shaders/plane_2": {
+                "built_in_samplers": [
+                    "bnb_BONES",
+                    "bnb_UVMORPH_FISHEYE",
+                    "bnb_MORPH"
+                ],
+                "samplers": [
+                    {
+                        "image": "tap",
+                        "name": "glfx_VIDEO"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    },
+                    {
+                        "name": "bnb_UVMORPH_FISHEYE"
+                    },
+                    {
+                        "name": "bnb_MORPH"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "alpha",
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                }
+            },
+			"unused": {
+				"path": "shaders/unused",
+				"parameters": {
+					"face_color": {
+						"type": "vec4",
+						"value": [
+							0.47,
+							0.35,
+							0.27,
+							0
+						]
+					},
+					"hair_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"hat_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"brows_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"lips_color": {
+						"type": "vec4",
+						"value": [
+							1,
+							0,
+							0,
+							1
+						]
+					},
+					"lips_mr": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"face_shape_rstd": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"face_shape_hpro": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"face_gender": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"nose_shape_lws": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"brows_shape_tcar": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"brows_shape_sh_pv": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"mouth_shape_sv_sh_pv_smile": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"eyes_shape_rdum": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"eyes_shape_ws": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"eyes_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"ears_shape_sv_sh_pv": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"foreground_mode_aspect_rotation": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"background_aspect_rotation": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"lut_strength": {
+						"type": "vec4",
+						"value": [
+							1,
+							0,
+							0,
+							0
+						]
+					},
+					"position_scale": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"wrinkles_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"freckles_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"moles_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"blush_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"shadows_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"eyelids_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"glasses_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"facialhair_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"right_earring_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"left_earring_color": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"radiance_1": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"radiance_2": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"radiance_3": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"radiance_4": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"lights_1": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"lights_2": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"lights_3": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"lights_4": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"face_rotation": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					"js_limits": {
+						"type": "vec4",
+						"value": [
+							-30.0,
+							30.0,
+							0,
+							0
+						]
+					},
+					"is_hat": {
+						"type": "vec4",
+						"value": [
+							0,
+							0,
+							0,
+							0
+						]
+					},
+					
+					"is_face_anim": {
+						"type": "vec4",
+						"value": [
+							1,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"samplers": [
+					{
+						"name": "bnb_BONES"
+					}
+				],
+				"state": {
+					"backfaces": false,
+					"blend": "off",
+					"colorwrite": true,
+					"ztest": true,
+					"zwrite": false
+				}
+			}
+		},
+		"media": {
+            "tap": {
+                "file_name": "videos/tap.mp4",
+                "looped": true,
+                "play": true,
+                "type": "video"
+            }
+        },
+		"meshes": {
+			"!scene_FACE": "$builtin$meshes/face.stream:0",
+			"quad": "$builtin$meshes/quad",
+			"camera_surface": "$builtin$meshes/fs_tri",
+			"body": "meshes/body.bsm2",
+			"eyes": "meshes/eyes.bsm2",
+			"eyelashes_01": "meshes/eyelashes_01.bsm2",
+			"eyelashes_02": "meshes/eyelashes_02.bsm2",
+			"eyelashes_03": "meshes/eyelashes_03.bsm2",
+			"eyelashes_04": "meshes/eyelashes_04.bsm2",
+			"ears": "meshes/ears.bsm2",
+			"earring_01_L": "meshes/earring_01_L.bsm2",
+			"earring_01_R": "meshes/earring_01_R.bsm2",
+			"brows": "meshes/brows.bsm2",
+			"mouth": "meshes/mouth.bsm2",
+			"mustache_02": "meshes/mustache_02.bsm2",
+			"hat_02": "meshes/hat_02.bsm2",
+			"hair_01": "meshes/hair_01.bsm2",
+			"hair_02": "meshes/hair_02.bsm2",
+			"hair_03": "meshes/hair_03.bsm2",
+			"hair_04": "meshes/hair_04.bsm2",
+			"hair_05": "meshes/hair_05.bsm2",
+			"hair_06": "meshes/hair_06.bsm2",
+			"hair_07": "meshes/hair_07.bsm2",
+			"hair_08": "meshes/hair_08.bsm2",
+			"hair_09": "meshes/hair_09.bsm2",
+			"hair_10": "meshes/hair_10.bsm2",
+			"hair_11": "meshes/hair_11.bsm2",
+			"hair_12": "meshes/hair_12.bsm2",
+			"hair_13": "meshes/hair_13.bsm2",
+			"cloth_01": "meshes/cloth_01.bsm2",
+			"cloth_02": "meshes/cloth_02.bsm2",
+			"cloth_03": "meshes/cloth_03.bsm2",
+			"cloth_04": "meshes/cloth_04.bsm2",
+			"cloth_05": "meshes/cloth_05.bsm2",
+			"cloth_06": "meshes/cloth_06.bsm2",
+			"cloth_07": "meshes/cloth_07.bsm2",
+			"cloth_08": "meshes/cloth_08.bsm2",
+			"cloth_09": "meshes/cloth_09.bsm2",
+			"cloth_10": "meshes/cloth_10.bsm2",
+			"cloth_11": "meshes/cloth_11.bsm2",
+			"cloth_12": "meshes/cloth_12.bsm2",
+			"cloth_13": "meshes/cloth_13.bsm2",
+			"cloth_14": "meshes/cloth_14.bsm2",
+			"plane": "meshes/plane.bsm2",
+			"glasses_01": "meshes/glasses_01.bsm2"
+		}
+	},
+	"components": {
+		"face_tracker:0": {
+			"face": "face0",
+			"type": "face_tracker"
+		},
+		"avatar_transformation": {
+			"rotation": [
+				-1.570796,
+				0.0,
+				0.0
+			],
+			"scale": [
+				0.1,
+				0.1,
+				0.1
+			],
+			"translation": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"type": "transformation_3d"
+		},
+		"Unused": {
+			"materials": [
+				"unused"
+			],
+			"mesh": "camera_surface",
+			"type": "mesh_instance"
+		},
+		"Body": {
+			"materials": [
+				"mat_head"
+			],
+			"mesh": "body",
+			"type": "mesh_instance"
+		},
+		"Eyes": {
+			"materials": [
+				"mat_eyes",
+				"mat_eyeShadow"
+			],
+			"mesh": "eyes",
+			"type": "mesh_instance"
+		},
+		"Eyelashes_01": {
+			"materials": [
+				"mat_eyelashes"
+			],
+			"mesh": "eyelashes_01",
+			"type": "mesh_instance"
+		},
+		"Eyelashes_02": {
+			"materials": [
+				"mat_eyelashes1"
+			],
+			"mesh": "eyelashes_02",
+			"type": "mesh_instance"
+		},
+		"Eyelashes_03": {
+			"materials": [
+				"mat_eyelashes2"
+			],
+			"mesh": "eyelashes_03",
+			"type": "mesh_instance"
+		},
+		"Eyelashes_04": {
+			"materials": [
+				"mat_eyelashes3"
+			],
+			"mesh": "eyelashes_04",
+			"type": "mesh_instance"
+		},
+		"Brows": {
+			"materials": [
+				"mat_brows"
+			],
+			"mesh": "brows",
+			"type": "mesh_instance"
+		},
+		"Hair": {
+			"materials": [
+				"mat_hair_01"
+			],
+			"mesh": "hair_01",
+			"type": "mesh_instance"
+		},
+		"Hat": {
+			"materials": [
+				"mat_hat_01"
+			],
+			"mesh": "hat_02",
+			"type": "mesh_instance"
+		},
+		"Mustache": {
+			"materials": [
+				"mat_mustache_01"
+			],
+			"mesh": "mustache_02",
+			"type": "mesh_instance"
+		},
+		"Mouth": {
+			"materials": [
+				"mat_mouth"
+			],
+			"mesh": "mouth",
+			"type": "mesh_instance"
+		},
+		"Glasses": {
+			"materials": [
+				"mat_glasses_01"
+			],
+			"mesh": "glasses_01",
+			"type": "mesh_instance"
+		},
+		"Ears": {
+			"materials": [
+				"mat_ears"
+			],
+			"mesh": "ears",
+			"type": "mesh_instance"
+		},
+		"Earring_L": {
+			"materials": [
+				"mat_earring_L"
+			],
+			"mesh": "earring_01_L",
+			"type": "mesh_instance"
+		},
+		"Earring_R": {
+			"materials": [
+				"mat_earring_R"
+			],
+			"mesh": "earring_01_R",
+			"type": "mesh_instance"
+		},
+		"Cloth": {
+			"materials": [
+				"mat_cloth_01",
+				"mat_logo_01"
+			],
+			"mesh": "cloth_01",
+			"type": "mesh_instance"
+		}
+	},
+	"entities": {
+		"face_tracker0": {
+			"components": [
+				"face_tracker:0"
+			]
+		},
+		"plane": {
+			"components": {
+				"mesh_instance": {
+					"materials": [
+						"shaders/plane_2"
+					],
+					"mesh": "plane"
+				}
+			},
+			"layer": "plane"
+		},
+		"UpdateBG": {
+			"components": {
+				"mesh_instance": {
+					"materials": [
+						"$builtin$materials/copy_pixels.-1"
+					],
+					"mesh": "camera_surface"
+				}
+			},
+			"layer": "UpdateBG"
+		},
+		"UpdateFG": {
+			"components": {
+				"mesh_instance": {
+					"materials": [
+						"$builtin$materials/copy_pixels.0"
+					],
+					"mesh": "camera_surface"
+				}
+			},
+			"layer": "UpdateFG"
+		},
+		"Lut": {
+			"components": {
+				"mesh_instance": {
+					"materials": [
+						"lut"
+					],
+					"mesh": "camera_surface"
+				}
+			},
+			"layer": "Lut"
+		},
+		"Foreground": {
+			"components": {
+				"mesh_instance": {
+					"materials": [
+						"foreground"
+					],
+					"mesh": "camera_surface"
+				}
+			},
+			"layer": "Foreground"
+		},
+		"Background": {
+			"components": {
+				"mesh_instance": {
+					"materials": [
+						"background"
+					],
+					"mesh": "camera_surface"
+				}
+			},
+			"layer": "Background"
+		},
+		"Body": {
+			"components": [
+				"Body",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Body"
+			]
+		},
+		"Eyes": {
+			"components": [
+				"Eyes",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Eyes",
+				"Shadows"
+			]
+		},
+		"Eyelashes_01": {
+			"components": [
+				"Eyelashes_01",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Eyelashes_01"
+			]
+		},
+		"Eyelashes_02": {
+			"components": [
+				"Eyelashes_02",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Eyelashes_02"
+			]
+		},
+		"Eyelashes_03": {
+			"components": [
+				"Eyelashes_03",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Eyelashes_03"
+			]
+		},
+		"Eyelashes_04": {
+			"components": [
+				"Eyelashes_04",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Eyelashes_04"
+			]
+		},
+		"Brows": {
+			"components": [
+				"Brows",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Brows"
+			]
+		},
+		"Hair": {
+			"components": [
+				"Hair",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Hair"
+			]
+		},
+		"Hat": {
+			"components": [
+				"Hat",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Hat"
+			]
+		},
+		"Mustache": {
+			"components": [
+				"Mustache",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Mustache"
+			]
+		},
+		"Mouth": {
+			"components": [
+				"Mouth",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Mouth"
+			]
+		},
+		"Glasses": {
+			"components": [
+				"Glasses",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Glasses"
+			]
+		},
+		"Ears": {
+			"components": [
+				"Ears",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Ears"
+			]
+		},
+		"Earring_L": {
+			"components": [
+				"Earring_L",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Earring_L"
+			]
+		},
+		"Earring_R": {
+			"components": [
+				"Earring_R",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Earring_R"
+			]
+		},
+		"Cloth": {
+			"components": [
+				"Cloth",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Cloth"
+			]
+		},
+		"Unused": {
+			"components": [
+				"Unused",
+				"avatar_transformation"
+			],
+			"layers": [
+				"Unused"
+			]
+		}
+	},
+	"hierarchy": {
+		"face_tracker0": [
+			"Unused"
+		],
+		"root": [
+			"face_tracker0",
+			"plane",
+			"Foreground",
+			"Body",
+			"Hair",
+			"Hat",
+			"Mustache",
+			"Mouth",
+			"Ears",
+			"Earring_L",
+			"Earring_R",
+			"Eyelashes_01",
+			"Eyelashes_02",
+			"Eyelashes_03",
+			"Eyelashes_04",
+			"Brows",
+			"Glasses",
+			"Eyes",
+			"Cloth",
+			"UpdateBG",
+			"UpdateFG",
+			"Lut",
+			"Background"
+		]
+	},
+	"layers": {},
+	"main_camera": {
+        "adjust_zfar": 1500,
+        "adjust_znear": 500
+    },
+	"render_list": {
+		"default": [
+			{
+				"layer": "Background",
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Body",
+				"sub_geometries": [
+					"mat_head"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Shadows",
+				"sub_geometries": [
+					"mat_eyeShadow"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Mouth",
+				"sub_geometries": [
+					"mat_mouth"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Mustache",
+				"sub_geometries": [
+					"mat_mustache_01"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Eyelashes_01",
+				"sub_geometries": [
+					"mat_eyelashes"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Eyelashes_02",
+				"sub_geometries": [
+					"mat_eyelashes1"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Eyelashes_03",
+				"sub_geometries": [
+					"mat_eyelashes2"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Eyelashes_04",
+				"sub_geometries": [
+					"mat_eyelashes3"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Eyes",
+				"sub_geometries": [
+					"mat_eyes"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Brows",
+				"sub_geometries": [
+					"mat_brows"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Ears",
+				"sub_geometries": [
+					"mat_ears"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Earring_L",
+				"sub_geometries": [
+					"mat_earring_L"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Earring_R",
+				"sub_geometries": [
+					"mat_earring_R"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Hair",
+				"sub_geometries": [
+					"mat_hair_01"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Hat",
+				"sub_geometries": [
+					"mat_hat_01"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Glasses",
+				"sub_geometries": [
+					"mat_glasses_01"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "Cloth",
+				"sub_geometries": [
+					"mat_cloth_01",
+					"mat_logo_01"
+				],
+				"render_target": "cameraRT"
+			},
+			{
+				"layer": "UpdateBG",
+				"render_target": "foregroundRT"
+			},
+			{
+				"layer": "Foreground",
+				"render_target": "foregroundRT"
+			},
+			{
+				"layer": "UpdateFG",
+				"render_target": "lutRT"
+			},
+			{
+				"layer": "Lut",
+				"render_target": "lutRT"
+			},
+			{
+				"layer": "plane",
+				"render_target": "lutRT"
+			}
+		]
+	},
+	"render_targets": {
+		"cameraRT": {
+			"attachments": [
+				"main_color",
+				"main_z"
+			],
+            "samples_count": 4
+		},
+		"foregroundRT": [
+			"foreground_color"
+		],
+		"lutRT": [
+			"lut_color"
+		]
+	},
+	"scene": "Avatar2.0",
+	"script": {
+		"entry_point": "config.js",
+		"type": "latest"
+	}
+}

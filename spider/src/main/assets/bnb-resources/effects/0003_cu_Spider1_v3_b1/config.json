@@ -1,0 +1,370 @@
+{
+    "assets": {
+        "attachments": {
+            "ComposerRT_color": {
+                "type": "color"
+            },
+            "EffectRT0_color": {
+                "type": "color"
+            },
+            "EffectRT0_depth": {
+                "clear": [
+                    1.0
+                ],
+                "type": "depth"
+            },
+            "finalColorFilterRT_color": {
+                "type": "color"
+            }
+        },
+        "faces": {
+            "face0": {
+                "index": 0,
+                "mesh": "!glfx_FACE"
+            }
+        },
+        "images": {
+            "TarantulaDiffFur.png": {
+                "file_name": "images/TarantulaDiffFur.png",
+                "type": "texture"
+            },
+            "TarantulaNM.png": {
+                "file_name": "images/TarantulaNM.png",
+                "type": "texture"
+            },
+            "background": {
+                "active": false,
+                "recognizer_feature_name": "background",
+                "type": "segmentation_mask"
+            },
+            "camera": {
+                "type": "procedural_texture",
+                "algorithm": "camera_composer"
+            },
+            "hair": {
+                "active": false,
+                "recognizer_feature_name": "hair",
+                "type": "segmentation_mask"
+            },
+            "left_eye": {
+                "active": false,
+                "recognizer_feature_name": "left_eye",
+                "type": "segmentation_mask"
+            },
+            "limontea.png": {
+                "file_name": "images/limontea.png",
+                "type": "texture"
+            },
+            "lips": {
+                "active": false,
+                "recognizer_feature_name": "lips",
+                "type": "segmentation_mask"
+            },
+            "lips_shining": {
+                "active": false,
+                "recognizer_feature_name": "lips_shining",
+                "type": "segmentation_mask"
+            },
+            "lut_80_percent.png": {
+                "file_name": "images/lut_80_percent.png",
+                "type": "texture"
+            },
+            "null_image.png": {
+                "file_name": "images/null_image.png",
+                "type": "texture"
+            },
+            "null_lut.png": {
+                "file_name": "images/null_lut.png",
+                "type": "texture"
+            },
+            "preview.png": {
+                "file_name": "images/preview.png",
+                "type": "texture"
+            },
+            "redmask_v3.png": {
+                "file_name": "images/redmask_v3.png",
+                "type": "texture"
+            },
+            "right_eye": {
+                "active": false,
+                "recognizer_feature_name": "right_eye",
+                "type": "segmentation_mask"
+            },
+            "skin": {
+                "active": false,
+                "recognizer_feature_name": "skin",
+                "type": "segmentation_mask"
+            },
+            "teeth_highlighter5.png": {
+                "file_name": "images/teeth_highlighter5.png",
+                "type": "texture"
+            }
+        },
+        "materials": {
+            "$builtin$materials/copy_pixels.0": {
+                "parameters": {},
+                "samplers": [
+                    {
+                        "image": "camera",
+                        "name": "tex_src"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                }
+            },
+            "shaders/Fur": {
+                "built_in_samplers": [
+                    "bnb_BONES",
+                    "bnb_MORPH"
+                ],
+                "samplers": [
+                    {
+                        "image": "TarantulaDiffFur.png",
+                        "name": "s_diffuse"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    },
+                    {
+                        "name": "bnb_MORPH"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "alpha",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": false
+                }
+            },
+            "shaders/Spider": {
+                "built_in_samplers": [
+                    "bnb_BONES",
+                    "bnb_MORPH"
+                ],
+                "samplers": [
+                    {
+                        "image": "TarantulaDiffFur.png",
+                        "name": "s_diffuse"
+                    },
+                    {
+                        "image": "TarantulaNM.png",
+                        "name": "s_normal"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    },
+                    {
+                        "name": "bnb_MORPH"
+                    }
+                ],
+                "state": {
+                    "backfaces": false,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            },
+            "shaders/finalColorFilter.fsh": {
+                "samplers": [
+                    {
+                        "image": "EffectRT0_color",
+                        "name": "s_src"
+                    },
+                    {
+                        "image": "limontea.png",
+                        "name": "lookupTexture"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                }
+            },
+            "shaders/retouch": {
+                "built_in_samplers": [],
+                "lagacy_onface_flag": true,
+                "samplers": [
+                    {
+                        "image": "redmask_v3.png",
+                        "name": "selection_tex"
+                    },
+                    {
+                        "image": "teeth_highlighter5.png",
+                        "name": "lookupTexTeeth"
+                    },
+                    {
+                        "image": "lut_80_percent.png",
+                        "name": "lookupTexEyes"
+                    },
+                    {
+                        "image": "camera",
+                        "name": "glfx_BACKGROUND"
+                    }
+                ],
+                "state": {
+                    "backfaces": false,
+                    "blend": "off",
+                    "colorwrite": true,
+                    "ztest": true,
+                    "zwrite": true
+                }
+            }
+        },
+        "media": {
+            "Big_Spider_Action_Mode.ogg": {
+                "file_name": "audios/Big_Spider_Action_Mode.ogg",
+                "type": "audio"
+            },
+            "Big_Spider_sfx.ogg": {
+                "file_name": "audios/Big_Spider_sfx.ogg",
+                "type": "audio"
+            },
+            "frx": {
+                "type": "video"
+            }
+        },
+        "meshes": {
+            "!glfx_FACE": "$builtin$meshes/face.stream:0",
+            "camera_surface": "$builtin$meshes/fs_tri",
+            "tarantula.bsm2": "meshes/tarantula.bsm2"
+        },
+        "morphs": {}
+    },
+    "components": {
+        "ComposerRT_copy": {
+            "materials": [
+                "$builtin$materials/copy_pixels.0"
+            ],
+            "mesh": "camera_surface",
+            "type": "mesh_instance"
+        },
+        "face_tracker:0": {
+            "face": "face0",
+            "type": "face_tracker"
+        },
+        "finalColorFilter": {
+            "materials": [
+                "shaders/finalColorFilter.fsh"
+            ],
+            "mesh": "camera_surface",
+            "type": "mesh_instance"
+        }
+    },
+    "entities": {
+        "ComposerRT_copy_append_to_root__": {
+            "components": [
+                "ComposerRT_copy"
+            ],
+            "layer": "ComposerRT_copy"
+        },
+        "face_tracker0": {
+            "components": [
+                "face_tracker:0"
+            ]
+        },
+        "finalColorFilter_append_to_root__": {
+            "components": "finalColorFilter",
+            "layer": "finalColorFilter"
+        },
+        "spawn_entity0": {
+            "add_to_legacy_entities_list": true,
+            "layers": [
+                "retouch",
+                "Spider",
+                "Fur"
+            ]
+        },
+        "spawn_entity1": {
+            "add_to_legacy_entities_list": true,
+            "layers": [
+                "retouch",
+                "Spider",
+                "Fur"
+            ]
+        }
+    },
+    "hierarchy": {
+        "face_tracker0": [
+            "spawn_entity0",
+            "spawn_entity1"
+        ],
+        "root": [
+            "face_tracker0",
+            "ComposerRT_copy_append_to_root__",
+            "finalColorFilter_append_to_root__"
+        ]
+    },
+    "layers": {
+        "ComposerRT_copy": {},
+        "Fur": {},
+        "Spider": {},
+        "finalColorFilter": {},
+        "internal_face_morph__": {},
+        "retouch": {}
+    },
+    "main_camera": {},
+    "render_list": {
+        "default": [
+            {
+                "layer": "ComposerRT_copy",
+                "render_target": "EffectRT0"
+            },
+            {
+                "layer": "retouch",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "retouch"
+                ]
+            },
+            {
+                "layer": "Spider",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "Spider"
+                ]
+            },
+            {
+                "layer": "Fur",
+                "render_target": "EffectRT0",
+                "sub_geometries": [
+                    "Fur"
+                ]
+            },
+            {
+                "layer": "internal_face_morph__",
+                "render_target": "EffectRT0"
+            },
+            {
+                "layer": "finalColorFilter",
+                "render_target": "finalColorFilterRT"
+            }
+        ]
+    },
+    "render_targets": {
+        "ComposerRT": [
+            "ComposerRT_color"
+        ],
+        "EffectRT0": [
+            "EffectRT0_color",
+            "EffectRT0_depth"
+        ],
+        "finalColorFilterRT": [
+            "finalColorFilterRT_color"
+        ]
+    },
+    "scene": "0003_cu_Spider1_v3_b1",
+    "script": {
+        "entry_point": "config.js",
+        "type": "legacy"
+    }
+}
