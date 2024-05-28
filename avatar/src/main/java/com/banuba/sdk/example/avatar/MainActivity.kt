@@ -50,7 +50,7 @@ class MainActivity : BaseActivity(R.layout.main) {
         // Set custom OnTouchListener to change mask style.
         surfaceView.setOnTouchListener(PlayerTouchListener(this, player))
 
-        // Load avatar effect from app bundle. It will use the config provided
+        // Load avatar effect from app assets. It will use the config provided
         // in `setState` call from here
         // https://github.com/Banuba/banuba-sdk-android-samples/blob/master/avatar/src/main/assets/bnb-resources/effects/Avatar_effect/config.js#L97
         // you may modify it right there or during runtime (see below).
