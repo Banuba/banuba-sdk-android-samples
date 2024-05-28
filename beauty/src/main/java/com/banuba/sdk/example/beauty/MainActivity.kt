@@ -3,6 +3,8 @@ package com.banuba.sdk.example.beauty
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.SurfaceView
+import android.view.View
+import android.widget.Button
 import com.banuba.sdk.example.common.BaseActivity
 import com.banuba.sdk.input.CameraDevice
 import com.banuba.sdk.input.CameraInput
@@ -82,12 +84,20 @@ class MainActivity : BaseActivity(R.layout.main) {
         // Set custom OnTouchListener to change mask style.
         surfaceView.setOnTouchListener(PlayerTouchListener(this, player))
 
-        val effect = player.loadAsync("effects/Makeup")
+        findViewById<Button>(R.id.spiderButton).setOnClickListener {
+            player.loadAsync("effects/0003_cu_Spider1_v3_b1")
+        }
 
-        // This will evalute JS code in context of Makeup effect. You may also
-        // place it at the end of `config.js` in Makeup effect (see effect folder
-        // in this project files.
-        effect?.evalJs(beautyConfig, null)
+        findViewById<Button>(R.id.makeupButton).setOnClickListener {
+            val effect = player.loadAsync("effects/Makeup")
+
+            // This will evalute JS code in context of Makeup effect. You may also
+            // place it at the end of `config.js` in Makeup effect (see effect folder
+            // in this project files.
+            effect?.evalJs(beautyConfig, null)
+        }
+
+
     }
 
     override fun onStart() {

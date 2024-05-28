@@ -48,6 +48,10 @@ task("copyEffects") {
         from("../common/Makeup")
         into("src/main/assets/bnb-resources/effects/Makeup")
     }
+    copy {
+        from("../common/effects/0003_cu_Spider1_v3_b1")
+        into("src/main/assets/bnb-resources/effects/0003_cu_Spider1_v3_b1")
+    }
 }
 
 gradle.projectsEvaluated {
