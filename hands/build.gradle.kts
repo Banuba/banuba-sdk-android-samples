@@ -5,6 +5,8 @@ plugins {
     id("org.jetbrains.kotlin.android").version("1.9.0")
 }
 
+val bnb_version = "1.14.+"
+
 android {
     namespace = "com.banuba.sdk.example.hands"
     compileSdk = 34
@@ -49,7 +51,7 @@ android {
 
 dependencies {
     implementation(project(":common"))
-    implementation("com.banuba.sdk:hands:1.12.+")
-    implementation("com.banuba.sdk:watch:1.12.+")
+    implementation("com.banuba.sdk:hands:$bnb_version")
+    implementation("com.banuba.sdk:watch:$bnb_version")
 }
 
