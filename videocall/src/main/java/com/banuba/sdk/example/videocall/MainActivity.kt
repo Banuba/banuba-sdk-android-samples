@@ -160,7 +160,7 @@ class MainActivity : AppCompatActivity(R.layout.main) {
                 requireNotNull(banubaPlayer)
             )
         )
-        binding.localSurfaceView.setZOrderMediaOverlay(true)
+        binding.localSurfaceView.setZOrderOnTop(true)
 
         val effects = BanubaSdkManager.loadEffects()
         effectsAdapter?.submitList(effects)
