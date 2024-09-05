@@ -87,7 +87,17 @@ class MainActivity : BaseActivity(R.layout.main) {
         // This will evalute JS code in context of Makeup effect. You may also
         // place it at the end of `config.js` in Makeup effect (see effect folder
         // in this project files.
-        effect?.evalJs(beautyConfig, null)
+        // effect?.evalJs(beautyConfig, null)
+
+        // This if file in `Makeup` folder
+        //val value = "BG4"
+
+        // This is if file is assets/bnb_resources
+        val value = "BG2"
+
+        effect?.evalJs("Background.texture('${value}.png')", null)
+        
+        // absolute path from filesystem will work too
     }
 
     override fun onStart() {
