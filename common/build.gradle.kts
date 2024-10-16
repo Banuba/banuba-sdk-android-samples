@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+val bnb_com_sdk = "com.banuba.sdk"
 val bnb_version = "1.14.+"
 
 android {
@@ -56,13 +57,12 @@ dependencies {
     // This API module, it is must be in your project, other dependecnies
     // are option. Everything depends on your needs
     // https://docs.banuba.com/face-ar-sdk-v1/core/tutorials/using_packages/#list-of-all-available-packages
-    api("com.banuba.sdk:sdk_api:$bnb_version")
+    api("$bnb_com_sdk:sdk_api:$bnb_version")
     // Face tracking is used in most effects
-    api("com.banuba.sdk:face_tracker:$bnb_version")
+    api("$bnb_com_sdk:face_tracker:$bnb_version")
     // Required to change background
-    api("com.banuba.sdk:background:$bnb_version")
+    api("$bnb_com_sdk:background:$bnb_version")
     // These dependency are usually required for Makeup and beauty
-    api("com.banuba.sdk:lips:$bnb_version")
-    api("com.banuba.sdk:eyes:$bnb_version")
-
+    api("$bnb_com_sdk:lips:$bnb_version")
+    api("$bnb_com_sdk:eyes:$bnb_version")
 }

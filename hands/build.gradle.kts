@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android").version("1.9.0")
 }
 
+val bnb_com_sdk = "com.banuba.sdk"
 val bnb_version = "1.14.+"
 
 android {
@@ -51,7 +52,6 @@ android {
 
 dependencies {
     implementation(project(":common"))
-    implementation("com.banuba.sdk:hands:$bnb_version")
-    implementation("com.banuba.sdk:watch:$bnb_version")
+    api("$bnb_com_sdk:hands:$bnb_version")
+    api("$bnb_com_sdk:watch:$bnb_version")
 }
-
