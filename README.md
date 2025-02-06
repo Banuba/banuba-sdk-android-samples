@@ -1,8 +1,8 @@
-[![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://docs.banuba.com/face-ar-sdk-v1/android/android_overview)
+[![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://docs.banuba.com/far-sdk/tutorials/development/basic_integration?platform=android)
 
-## Quick examples for [Banuba SDK on Android](https://docs.banuba.com/face-ar-sdk-v1/android/android_overview)
+## Quick examples for [Banuba SDK on Android](https://docs.banuba.com/far-sdk/tutorials/development/basic_integration?platform=android)
 
-## [Requirements](https://docs.banuba.com/face-ar-sdk-v1/overview/system_requirements)
+## [Requirements](https://docs.banuba.com/far-sdk/tutorials/capabilities/system_requirements)
 
 ## Usage
 ### Token
@@ -12,7 +12,7 @@ SDK for free. To start it,
 will get back to you with the trial token. You can store the token within the 
 app.  
 
-Feel free to [contact us](https://docs.banuba.com/face-ar-sdk-v1/support) if 
+Feel free to [contact us](https://docs.banuba.com/far-sdk/support) if 
 you have any questions.
 
 ### Getting Started
@@ -22,7 +22,7 @@ you have any questions.
 [`common/src/main/java/com/banuba/sdk/example/common/Application.kt`](common/src/main/java/com/banuba/sdk/example/common/Application.kt#L5)
 3. Open desired project in Android Studio and run it
 
-## Examples for integrating [Banuba SDK on Android](https://docs.banuba.com/face-ar-sdk-v1/android/android_getting_started).  
+## Examples for integrating [Banuba SDK on Android](https://docs.banuba.com/far-sdk/tutorials/development/basic_integration?platform=android).  
 
 This repository contains the following examples:   
 - [`camera`](camera/) apply effect to stream from camera and show it on the screen,  
@@ -37,4 +37,4 @@ Please, note, that individual samples may contain own `README` files. Consider t
 
 ### Docs
 You can find more info 
-[here](https://docs.banuba.com/face-ar-sdk-v1/android/android_overview).
+[here](https://docs.banuba.com/far-sdk/).
