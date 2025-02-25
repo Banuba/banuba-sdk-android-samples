@@ -3,8 +3,13 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-val bnb_com_sdk = "com.banuba.sdk"
-val bnb_version = "1.16.4"
+// Test:
+val bnb_com_sdk = "com.bnbtest.sdk"
+val bnb_version = "1.16.4-267-g6a92c38b6a"
+
+// Prod:
+// val bnb_com_sdk = "com.banuba.sdk"
+// val bnb_version = "1.16.4"
 
 android {
     namespace = "com.banuba.sdk.example.common"
