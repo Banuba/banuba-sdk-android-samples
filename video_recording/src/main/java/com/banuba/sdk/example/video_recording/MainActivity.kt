@@ -94,7 +94,7 @@ class MainActivity : BaseActivity(R.layout.main) {
             stateVideoButton = (stateVideoButton + 1) % 3
         }
 
-        player.load("effects/TrollGrandma")
+        player.loadAsync("effects/TrollGrandma")
     }
 
     override fun onStart() {
