@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.banuba.sdk.example.avatar"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
