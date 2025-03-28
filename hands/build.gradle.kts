@@ -6,7 +6,7 @@ plugins {
 }
 
 val bnb_com_sdk = "com.banuba.sdk"
-val bnb_version = "1.14.+"
+val bnb_version = "1.17.0"
 
 android {
     namespace = "com.banuba.sdk.example.hands"
