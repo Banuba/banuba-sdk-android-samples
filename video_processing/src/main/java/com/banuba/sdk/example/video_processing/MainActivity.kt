@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(R.layout.main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        player.play()
         // Synchronized effect loading
         player.load(MASK_NAME)
 
