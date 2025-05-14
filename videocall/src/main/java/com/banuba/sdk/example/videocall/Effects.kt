@@ -17,7 +17,7 @@ val effectPreviews = mapOf<String, Int>(
     "relook" to R.drawable.ic_lips,
     "Sunset" to com.banuba.sdk.example.common.R.drawable.ic_regular_background,
     "TrollGrandma" to R.drawable.ic_mask_grndma,
-    "video_BG_Metro_sfx" to R.drawable.ic_video_texture_background,
+    "video_BG_Metro" to R.drawable.ic_video_texture_background,
     "video_BG_RainyCafe" to R.drawable.ic_video_texture_background,
     "WhooshBeautyFemale" to R.drawable.ic_mask_beauty,
 )
