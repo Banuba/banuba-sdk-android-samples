@@ -5,14 +5,23 @@ plugins {
     id("org.jetbrains.kotlin.android").version("1.9.0")
 }
 
+buildscript{
+    apply(from = "../common/common.gradle.kts")
+}
+
+val commonCompileSdk: Int by extra
+val commonMinSdk: Int by extra
+val commonKotlinJvmTarget: String by extra
+
+
 android {
     namespace = "com.banuba.sdk.example.video_recording"
-    compileSdk = 34
+    compileSdk = commonCompileSdk
 
     defaultConfig {
         applicationId = "com.banuba.sdk.example.video_recording"
-        minSdk = 26
-        targetSdk = 34
+        minSdk = commonMinSdk
+        targetSdk = commonCompileSdk
         versionCode = 1
         versionName = "1.0"
 
@@ -34,7 +43,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = commonKotlinJvmTarget
     }
     packaging {
         resources {

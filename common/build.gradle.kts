@@ -3,15 +3,23 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-val bnb_com_sdk = "com.banuba.sdk"
-val bnb_version = "1.17.0"
+buildscript{
+    apply(from = "common.gradle.kts")
+}
+
+val commonCompileSdk: Int by extra
+val commonMinSdk: Int by extra
+val commonKotlinJvmTarget: String by extra
+
+val bnbComSdk: String by extra
+val bnbVersion: String by extra
 
 android {
     namespace = "com.banuba.sdk.example.common"
-    compileSdk = 34
+    compileSdk = commonCompileSdk
 
     defaultConfig {
-        minSdk = 26
+        minSdk = commonMinSdk
     }
 
     buildTypes {
@@ -27,7 +35,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = commonKotlinJvmTarget
     }
 
     buildFeatures {
@@ -57,12 +65,12 @@ dependencies {
     // This API module, it is must be in your project, other dependecnies
     // are option. Everything depends on your needs
     // https://docs.banuba.com/face-ar-sdk-v1/core/tutorials/using_packages/#list-of-all-available-packages
-    api("$bnb_com_sdk:sdk_api:$bnb_version")
+    api("$bnbComSdk:sdk_api:$bnbVersion")
     // Face tracking is used in most effects
-    api("$bnb_com_sdk:face_tracker:$bnb_version")
+    api("$bnbComSdk:face_tracker:$bnbVersion")
     // Required to change background
-    api("$bnb_com_sdk:background:$bnb_version")
+    api("$bnbComSdk:background:$bnbVersion")
     // These dependency are usually required for Makeup and beauty
-    api("$bnb_com_sdk:lips:$bnb_version")
-    api("$bnb_com_sdk:eyes:$bnb_version")
+    api("$bnbComSdk:lips:$bnbVersion")
+    api("$bnbComSdk:eyes:$bnbVersion")
 }
