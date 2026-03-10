@@ -43,7 +43,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = jvmTarget
+        jvmTarget = commonKotlinJvmTarget
     }
     packaging {
         resources {
