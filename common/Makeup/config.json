@@ -1,16 +1,37 @@
+// More on this:
+// https://docs.banuba.com/far-sdk/effects/overview
+
 {
-  "assets": {
-    "images": {
-      "camera": {
-        "sort": -1,
-        "type": "procedural_texture",
-        "algorithm": "camera_composer"
-      }
-    }
-  },
-  "script": {
-    "type": "latest",
-    "entry_point": "config.js"
-  },
-  "scene": "Makeup"
+    "camera": {},
+
+    "faces": [
+        {
+            "makeup_base": {
+                "smooth": "1 0"
+            },
+            "eyelashes": {
+                "color": ".7 0.6 0.8 1."
+            },
+            "eyes": {
+                "eyes": "#00AA90C0"
+            },
+            "lut": {
+                "filename": "LUT_sunny.png"
+            },
+            "teeth_whitening": {
+                "strength": 0.8
+            },
+            "morphing": {
+                "eyes": {
+                    "enlargement": 0.5
+                },
+                "face": {
+                    "chin_narrowing": 0.5
+                }
+            }
+        }
+    ],
+
+    "scene": "Makeup (prefabs)",
+    "version": "2.0.0"
 }
