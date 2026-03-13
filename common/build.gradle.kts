@@ -58,6 +58,6 @@ dependencies {
     // Required to change background
     api("$bnbComSdk:background:$bnbVersion")
     // These dependency are usually required for Makeup and beauty
-    api("$bnbComSdk:lips:$bnbVersion")
+    api("$bnbComSdk:makeup:$bnbVersion")
     api("$bnbComSdk:eyes:$bnbVersion")
 }
