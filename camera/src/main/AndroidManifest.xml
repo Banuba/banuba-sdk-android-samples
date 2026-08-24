@@ -4,6 +4,7 @@
 
     <application
         android:name="com.banuba.sdk.example.common.Application"
+        android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme"
         android:label="Banuba SDK Camera sample"
         tools:targetApi="31">

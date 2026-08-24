@@ -15,7 +15,7 @@
     <Button
         app:layout_constraintTop_toBottomOf="@id/progress"
         android:id="@+id/btn_open_original"
-        android:text="Open original"
+        android:text="@string/open_original"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
@@ -25,7 +25,7 @@
     <Button
         app:layout_constraintTop_toBottomOf="@id/btn_open_original"
         android:id="@+id/btn_video_action"
-        android:text="Process video"
+        android:text="@string/process_video"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"

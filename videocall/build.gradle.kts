@@ -55,6 +55,5 @@ android {
 
 dependencies {
     implementation(project(":common"))
-    implementation("io.agora.rtc:full-sdk:4.6+")
+    implementation("io.agora.rtc:full-rtc-basic:4.6.2")
 }
-

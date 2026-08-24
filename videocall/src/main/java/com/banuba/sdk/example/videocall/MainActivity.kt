@@ -246,7 +246,7 @@ class MainActivity : AppCompatActivity(R.layout.main) {
             stride = pb.bytesPerRow / pb.bytesPerPixel
             buf = pixelData
         }
-        agoraRtc?.pushExternalVideoFrame(videoFrame)
+        agoraRtc?.pushExternalVideoFrameById(videoFrame, 0)
     }
 
     private fun checkAllPermissionsGranted() = REQUIRED_PERMISSIONS.all {

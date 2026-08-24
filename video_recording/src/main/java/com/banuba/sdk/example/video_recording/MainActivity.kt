@@ -1,12 +1,11 @@
 package com.banuba.sdk.example.video_recording
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.SurfaceView
 import android.view.View
 import android.widget.Button
-import android.widget.Switch
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.FileProvider
 import com.banuba.sdk.example.common.BaseActivity
 import com.banuba.sdk.input.CameraDevice
@@ -34,7 +33,7 @@ class MainActivity : BaseActivity(R.layout.main) {
     }
 
     private val recordAudioSwitch by lazy(LazyThreadSafetyMode.NONE) {
-        findViewById<Switch>(R.id.recordAudioSwitch)
+        findViewById<SwitchCompat>(R.id.recordAudioSwitch)
     }
 
     // The player executes the main pipeline
@@ -57,7 +56,6 @@ class MainActivity : BaseActivity(R.layout.main) {
         VideoOutput()
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -74,7 +72,7 @@ class MainActivity : BaseActivity(R.layout.main) {
                 videoFileName = generateOutputVideoFile()
                 videoOutput.startRecording(videoFileName)
 
-                recordActionButton.text = "Stop"
+                recordActionButton.setText(R.string.stop)
                 recordAudioSwitch.visibility = View.GONE
 
 
@@ -82,12 +80,12 @@ class MainActivity : BaseActivity(R.layout.main) {
                 // Stop recording and wait for finish
                 videoOutput.stopRecordingAndWaitForFinish()
 
-                recordActionButton.text = "Play"
+                recordActionButton.setText(R.string.play)
                 recordAudioSwitch.visibility = View.GONE
             } else { // Play video
                 showVideo(videoFileName)
 
-                recordActionButton.text = "Start"
+                recordActionButton.setText(R.string.start)
                 recordAudioSwitch.visibility = View.VISIBLE
             }
 

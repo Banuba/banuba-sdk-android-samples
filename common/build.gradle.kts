@@ -41,6 +41,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    lint {
+        // These AndroidX versions match the AGP 8.3 / compileSdk 34 sample toolchain.
+        disable += "GradleDependency"
+    }
 }
 
 dependencies {
