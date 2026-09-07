@@ -3,16 +3,16 @@
 #define TEETH_WHITENING
 #define teethWhiteningCoeff 1.0
 #define EYES_WHITENING
-#define eyesWhiteningCoeff 0.5
+#define eyesWhiteningCoeff 0.2
 #define EYES_HIGHLIGHT
 #define SOFT_LIGHT_LAYER
 #define NORMAL_LAYER
 #define SOFT_SKIN
 #define skinSoftIntensity 0.7
 #define SHARPEN_TEETH
-#define teethSharpenIntensity 0.2
+#define teethSharpenIntensity 0.1
 #define SHARPEN_EYES
-#define eyesSharpenIntensity 0.3
+#define eyesSharpenIntensity 0.0
 #define PSI 0.1
 
 

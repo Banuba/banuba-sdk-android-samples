@@ -2,5 +2,5 @@
 
 void main()
 {
-    bnb_FragColor = vec4(0., 1., 0., 1.);
+    bnb_FragColor = vec4(0., 1., 0., 0.5);
 }

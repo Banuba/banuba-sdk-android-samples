@@ -115,7 +115,3 @@ function Effect()
 }
 
 configure(new Effect());
-
-function GetMouthStatus(){
-    return Api.isMouthOpen() || isSmile(world.landmarks, world.latents);
-}

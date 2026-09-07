@@ -3,66 +3,29 @@
         "attachments": {
             "effect_color": {
                 "type": "color"
-            },
-            "effect_depth": {
-                "clear": [
-                    1.0
-                ],
-                "type": "depth"
             }
         },
         "images": {
-            "camera: tex_y": {
-                "type" : "camera",
-                "format": "y"
-            },
-            "camera: tex_uv": {
-                "type" : "camera",
-                "format": "uv"
-            },
-            "camera: tex_rgb": {
-                "type" : "camera",
-                "format": "rgba"
+            "camera": {
+                "type": "procedural_texture",
+                "algorithm": "camera_composer"
             }
         },
         "materials": {
-            "$builtin$materials/camera": {
+            "$builtin$materials/copy_pixels.0": {
+                "parameters": {},
                 "samplers": [
-                    {
-                        "name": "tex_y",
-                        "image": "camera: tex_y"
-                    },
-                    {
-                        "name": "tex_uv",
-                        "image": "camera: tex_uv"
-                    },
-                    {
-                        "name": "tex_rgb",
-                        "image": "camera: tex_rgb"
-                    }
+                {
+                    "image": "camera",
+                    "name": "tex_src"
+                }
                 ],
                 "state": {
-                    "backfaces": true,
-                    "blend": "off",
-                    "colorwrite": true,
-                    "ztest": false,
-                    "zwrite": false
-                },
-                "parameters": {
-                    "bnb_camera_orientation": {
-                        "type": "vec4",
-                        "value": [1, 0, 0, 1]
-                    },
-
-                    "bnb_camera_scale": {
-                        "type": "vec4",
-                        "value": [1, 0, 0, 1]
-                    },
-
-                    "bnb_view_width_fraction": {
-                        "type": "vec4",
-                        "value": [1, 0, 0, 0]
-                    }
+                "backfaces": true,
+                "blend": "off",
+                "colorwrite": true,
+                "ztest": false,
+                "zwrite": false
                 }
             },
             "wireframe": {
@@ -70,7 +33,20 @@
                 ],
                 "state": {
                     "backfaces": false,
-                    "blend": "off",
+                    "blend": "alpha",
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                },
+                "geometry_topology": "lines_list",
+                "parameters": {}
+            },
+            "face_box": {
+                "samplers": [
+                ],
+                "state": {
+                    "backfaces": false,
+                    "blend": "alpha",
                     "colorwrite": true,
                     "ztest": false,
                     "zwrite": false
@@ -78,87 +54,64 @@
                 "geometry_topology": "lines_list",
                 "parameters": {}
             }
-        },
-        "meshes": {
-            "!bnb_FACE": "$builtin$meshes/wireframe.stream:0",
-            "camera_surface": "$builtin$meshes/fs_tri"
-        },
-        "faces": {
-            "face0": {
-                "index": 0,
-                "mesh": "!bnb_FACE"
-            }
-        }
-    },
-    "components": {
-        "camera_tri": {
-            "materials": ["$builtin$materials/camera"],
-            "mesh": "camera_surface",
-            "type": "mesh_instance"
-        },
-        "face:0": {
-            "materials": ["wireframe"],
-            "mesh": "!bnb_FACE",
-            "type": "mesh_instance"
-        },
-        "face_tracker:0": {
-            "face": "face0",
-            "type": "face_tracker"
         }
     },
     "entities": {
         "camera": {
-            "components": [
-                "camera_tri"
-            ],
-            "layer": "composer_pre"
+            "components": {
+                "mesh_instance": {
+                    "materials": ["$builtin$materials/copy_pixels.0"],
+                    "mesh": "$builtin$meshes/fs_tri"
+                }
+            },
+            "layer": "camera"
         },
-        "face0": {
-            "components": [
-                "face:0"
-            ],
-            "layer": "retouch"
+        "face_box": {
+            "components": {
+                "mesh_instance": {
+                    "materials": ["face_box"],
+                    "mesh": "$builtin$meshes/face_box.stream:0"
+                }
+            },
+            "layer": "camera"
         },
         "face_tracker0": {
-            "components": [
-                "face_tracker:0"
-            ]
+            "components": {
+                "face_tracker" : {
+                    "face": {
+                        "index": 0,
+                        "entity_name" : "face0",
+                        "mesh" : "$builtin$meshes/wireframe.stream:0",
+                        "materials": ["wireframe"],
+                        "layer": "wireframe"
+                    }
+                }
+            }
         }
     },
     "hierarchy": {
-        "face_tracker0": [
-            "face0"
-        ],
         "root": [
             "camera",
+            "face_box",
             "face_tracker0"
         ]
-    },
-    "layers": {
-        "composer_pre": {},
-        "camera_copy": {},
-        "retouch": {},
-        "morph": {}
     },
     "render_list": {
         "default": [
             {
-                "layer": "composer_pre",
+                "layer": "camera",
                 "render_target": "EffectRT"
             },
             {
-                "layer": "retouch",
+                "layer": "wireframe",
                 "render_target": "EffectRT"
             }
         ]
     },
     "render_targets": {
         "EffectRT": [
-            "effect_color",
-            "effect_depth"
+            "effect_color"
         ]
     },
-
-
-    "scene": "face_tracker"
+    "scene": "DebugFRX"
 }

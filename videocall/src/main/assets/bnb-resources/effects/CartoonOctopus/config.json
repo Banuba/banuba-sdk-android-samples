@@ -413,43 +413,11 @@
             }
         },
         "media": {
-            "Long_talking.ogg": {
-                "file_name": "audios/Long_talking.ogg",
-                "type": "audio"
-            },
-            "Octopus_Intro.ogg": {
-                "file_name": "audios/Octopus_Intro.ogg",
-                "type": "audio"
-            },
-            "Octopus_Jump.ogg": {
-                "file_name": "audios/Octopus_Jump.ogg",
-                "type": "audio"
-            },
-            "Octopus_Love_Hearts.ogg": {
-                "file_name": "audios/Octopus_Love_Hearts.ogg",
-                "type": "audio"
-            },
-            "Octopus_Soundfont_Strings.ogg": {
-                "file_name": "audios/Octopus_Soundfont_Strings.ogg",
-                "type": "audio"
-            },
-            "fall_down_to_ear.ogg": {
-                "file_name": "audios/fall_down_to_ear.ogg",
-                "type": "audio"
-            },
             "frx": {
                 "file_name": "videos/OctopusHeartOnHead.mp4",
                 "looped": false,
                 "play": false,
                 "type": "video"
-            },
-            "jump_from_ear.ogg": {
-                "file_name": "audios/jump_from_ear.ogg",
-                "type": "audio"
-            },
-            "octopus_hello.ogg": {
-                "file_name": "audios/octopus_hello.ogg",
-                "type": "audio"
             }
         },
         "meshes": {
@@ -809,10 +777,13 @@
         "ComposerRT": [
             "ComposerRT_color"
         ],
-        "EffectRT0": [
-            "EffectRT0_color",
-            "EffectRT0_depth"
-        ],
+        "EffectRT0": {
+            "attachments": [
+                "EffectRT0_color",
+                "EffectRT0_depth"
+            ],
+            "samples_count": 4
+        },
         "finalColorFilterRT": [
             "finalColorFilterRT_color"
         ]
